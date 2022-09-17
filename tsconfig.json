@@ -1,34 +1,42 @@
 {
   "compilerOptions": {
-    "rootDir": "./src",
-    "outDir": "./dist",
-    "module": "esnext",
-    "moduleResolution": "node",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
     "esModuleInterop": true,
+    "baseUrl": ".",
+    "outDir": "./dist",
     "isolatedModules": true,
     "strict": false,
-    "target": "es6",
+    "target": "ES2020",
     "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
     ],
     "allowJs": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
+    "noEmit": false,
+    "declaration": true,
+    "declarationMap": true,
     "resolveJsonModule": true,
     "jsx": "preserve",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "incremental": true,
-    "checkJs": true
+    "checkJs": true,
+    "types": [
+      "node"
+    ],
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
   },
   "extends": "ts-node/node16/tsconfig.json",
   "include": [
-    "./src/*.ts"
+    "src/**/*"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "dist"
   ]
 }

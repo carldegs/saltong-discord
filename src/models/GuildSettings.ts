@@ -1,6 +1,6 @@
 import { index, modelOptions, prop } from '@typegoose/typegoose';
 
-import { WordInHint } from '../lib/types';
+import type { WordInHint } from '../lib/types';
 
 @modelOptions({ schemaOptions: { collection: 'guildSettings' } })
 @index({ guildId: 1 }, { unique: true })
